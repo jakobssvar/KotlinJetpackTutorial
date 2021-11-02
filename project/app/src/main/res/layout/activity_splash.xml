@@ -10,15 +10,16 @@
     tools:context=".SplashActivity">
 
     <TextView
-        style="@style/Theme.KotlinJetpackTutorial.NoActionBar"
-        android:theme="@style/Theme.KotlinJetpackTutorial.NoActionBar"
         android:id="@+id/tvSplash"
-        android:textColor="@color/prime_light"
+        style="@style/Theme.KotlinJetpackTutorial.NoActionBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textColor="@color/prime_light"
+        android:theme="@style/Theme.KotlinJetpackTutorial.NoActionBar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
