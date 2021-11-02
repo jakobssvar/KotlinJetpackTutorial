@@ -1,11 +1,17 @@
 package com.example.kotlinjetpacktutorial
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_splash.*
+import kotlinx.coroutines.delay
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +27,25 @@ class SplashActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
             )
         }
-        tvSplash.text = getString(R.string.app_name)
+        val splashAnimation = AnimationUtils.loadAnimation(this,R.anim.splash_anim)
+        splashAnimation.setAnimationListener(object: Animation.AnimationListener {
+            override fun onAnimationStart(animation: Animation?) {
+               //
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                Handler(Looper.getMainLooper()).postDelayed({
+                    startActivity(Intent(this@SplashActivity,MainActivity::class.java))
+                    finish()
+
+                }, 1000)
+            }
+
+            override fun onAnimationRepeat(animation: Animation?) {
+                //
+            }
+        })
+        tvSplash.animation = splashAnimation
+
     }
 }
