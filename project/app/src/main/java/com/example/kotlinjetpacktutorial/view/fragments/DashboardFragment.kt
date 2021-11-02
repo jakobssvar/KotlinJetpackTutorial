@@ -1,4 +1,4 @@
-package com.example.kotlinjetpacktutorial.ui.dashboard
+package com.example.kotlinjetpacktutorial.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.kotlinjetpacktutorial.R
 import com.example.kotlinjetpacktutorial.databinding.FragmentDashboardBinding
+import com.example.kotlinjetpacktutorial.viewmodel.DashboardViewModel
 
 class DashboardFragment : Fragment() {
 

@@ -7,7 +7,7 @@
     style="@style/Theme.KotlinJetpackTutorial.NoActionBar"
     android:background="@color/design_default_color_primary_dark"
     android:theme="@style/Theme.KotlinJetpackTutorial.NoActionBar"
-    tools:context=".SplashActivity">
+    tools:context=".view.activities.SplashActivity">
 
     <TextView
         android:id="@+id/tvSplash"
